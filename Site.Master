@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="IssueRegister.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <%--<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />--%>
+    <link href="Login/css/Style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontwaesome.com/a076d05399.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .container
+        {
+            background-color: #F8F8FF;
+        }
+        .container
+        {
+            position: fixed;
+            left: 2px;
+            width: 269px;
+            background: #227a89;
+            top: -18px;
+            height: 1241px;
+            border-right-style: ridge;
+            border-right-color: inherit;
+            border-right-width: medium;
+        }
+        *
+        {
+            padding: 0;
+            user-select: none;
+            box-sizing: border-box;
+            margin-left: 0px;
+            margin-right: 5px;
+            margin-top: 0px;
+            text-decoration: none;
+        }
+        .nav ul li a:hover
+        {
+            color: black;
+            background: black;
+            border-left-color: Aqua;
+        }
+        .image
+        {
+        }
+        
+        .style4
+        {
+            width: 60px;
+        }
+        nav ul .feat-show.show
+        {
+            display: block;
+            background: #227a89;
+        }
+    </style>
+</head>
+<body id="theme-default" class="full_block" style="width: 100%; min-width: 300px;
+    max-width: 2000px; height: 1247px; margin-left: 2px; margin-top: 94px; position: fixed;
+    top: -92px; left: 0px;">
+    <form id="Form1" runat="server" class="nav">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="container">
+        <div class="home">
+        </div>
+        <div style="padding-top: 10%;">
+            <table>
+                <tr>
+                    <td class="style4">
+                        <img src="Login/Images/USER.png" height="50px" width="50px" />
+                    </td>
+                    <td>
+                        <asp:Label ID="lbluser" runat="server" Text="Label" Font-Bold="True" Font-Size="X-Large"
+                            ForeColor="yellow"></asp:Label>
+                    </td>
+                </tr>
+                <br />
+            </table>
+        </div>
+        <nav>
+        <ul>
+        <li style="width: 262px; height: 53px; font-weight: bold; font-size: x-large"><a
+                            href="Dashboard.aspx" class="fas fa-master"><span class="nav-item" style="font-size: 22px;
+                                color: white;">DashBoard</span></a></li>
+                                </ul>
+      
+        <ul>
+        <li style="width: 262px; height: 53px; font-weight: bold; font-size: x-large"><a
+                            href="TicketRegister_grid.aspx" class="fas fa-master"><span class="nav-item" style="font-size: 22px;
+                                color: white;">Issue Ticket</span></a></li>
+                                </ul>
+        <ul>
+            <li>
+                <div>
+            <a href="#" 
+                    style="text-decoration:none; height:40px; font-size:21px; font-family:calibire; background: #227a89; color: white;width: 264px;" class="feat-btn">
+                    Master</a>
+                </div>
+            <ul class="feat-show">
+                            <li style="width: 262px; height: 53px; font-weight: bold; font-size: x-large"><a
+                            href="UserCredential_grid.aspx" class="fas fa-master"><span class="nav-item" style="font-size: 22px;
+                            color: white;">User Credential</span></a></li>
+                            <li style="height: 49px; font-weight: bold; font-size: x-large; text-decoration: none;
+                            width: 260px;">
+                            <a href="customermaster_grid.aspx" class="fas fa-master">
+                            <span class="nav-item" style="font-size: 22px; color: white;">Customer Master</span></a></li>
+                            <li style="width: 261px; height: 48px; font-weight: bold; font-size: x-large"><a
+                            href="customerproduct_grid.aspx" class="fas fa-master" style="font-size: 22px;
+                            color: white;"><span class="nav-item">Customer Product</span></a></li>
+                           <li style="width: 262px; height: 46px; font-weight: bold; font-size: x-large"><a
+                            href="Amcdetail_grid.aspx" class="fas fa-master"><span class="nav-item" style="font-size: 22px;
+                            color: white;">AMC Detail </span></a></li>
+                           
+                        <%--<a
+                            href="UserLogin.aspx"  class="fas fa-master"   style="font-size: 22px; color: white;">
+                            <span class="nav-item">Exit</span><br />
+                        </a>--%></li>
+                        </ul>
+              
+                   </li>
+                 </ul>
+                  <ul>
+        <li style="width: 262px; height: 53px; font-weight: bold; font-size: x-large"><a
+                            href="Timesheet.aspx" class="fas fa-master"><span class="nav-item" style="font-size: 22px;
+                                color: white;">Timesheet</span></a></li>
+                                </ul>
+                 <ul>
+                  <li style="width: 261px; height: 48px; font-weight: bold; font-size: x-large"><a
+                            href="Email.aspx" class="fas fa-master" style="font-size: 22px; color: white;"><span
+                                class="nav-item">Test</span></a></li>
+                          <li style="width: 261px; height: 48px; font-weight: bold; font-size: x-large">
+                          <asp:Button ID="btn_Exit" runat ="server" style="background-color: #227a89;color: white; font-weight: bold;" OnClick="btn_Exit_click"
+                          Text="Exit" Height="47px" Width="263px"/>
+                          </ul>
+                 </nav>
+    </div>
+    <div style="height: 943px; margin-left: 284px; margin-top: -2px; width: 1200px; overflow: scroll;">
+        <script type="text/javascript" language="javascript">
+            $('.feat-btn').click(function () {
+                $('nav ul.feat-show').toggleClass("show");
+            });
+               
+               
+        </script>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
